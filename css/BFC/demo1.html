@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>防止浮动导致父元素高度塌陷</title>
+  <style>
+    .container {
+      border: 10px solid #f00;
+      overflow: hidden;
+    }
+
+    .inner {
+      float: left;
+      background-color: #08BDEB;
+      height: 100px;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="inner"></div>
+  </div>
+</body>
+
+</html>
