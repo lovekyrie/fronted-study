@@ -8,7 +8,9 @@ Parent.prototype.getName = function () {
 }
 
 function Child() {}
-
+/*  参考person=Person.prototype because of person.constructor=Person.prototype.constructor,
+ *  所以此处new Parent()对象实际上就是Parent.prototype
+ */
 Child.prototype = new Parent()
 
 var child1 = new Child()
