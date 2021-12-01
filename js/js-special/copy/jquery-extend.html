@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>参看jquery.extends功能</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+  <script>
+    var obj1 = {
+      a: 1,
+      b: {
+        b1: 1,
+        b2: 2
+      }
+    }
+
+    var obj2 = {
+      b: {
+        b1: 3,
+        b2: 4
+      },
+      c: 3
+    }
+
+    var obj3 = {
+      d: 4
+    }
+
+    console.log($.extend(obj1, obj2, obj3))
+    /* {
+      a: 1,
+      b: { b1: 3, b3: 4 },
+      c: 3,
+      d: 4
+    } */
+  </script>
+</body>
+
+</html>
