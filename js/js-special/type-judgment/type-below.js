@@ -27,3 +27,5 @@ function isArrayLike(obj) {
 }
 
 console.log(isArrayLike([1, 2, 3]));
+
+module.exports = isArrayLike
