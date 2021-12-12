@@ -38,7 +38,7 @@ obj[Symbol.iterator] = function () {
 };
 
 for (value of obj) {
-  if (color == 1) break;
+  if (value == 1) break;
   console.log(value);
 }
 //执行了return方法
@@ -164,3 +164,5 @@ const valuesMap1 = new Map([
 for (let [key, value] of valuesMap1) {
   console.log(key + ':' + value)
 }
+
+module.exports = forOf
