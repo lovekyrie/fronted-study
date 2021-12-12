@@ -3,6 +3,7 @@
 // 1.嵌套作用域 在JavaScript中函数可以嵌套函数
 (function autorun() {
   let x = 1;
+
   function log() {
     console.log(x);
   }
@@ -41,9 +42,11 @@
 // 4.词法作用域： 是指内部函数在定义的时候就决定了其外部作用域
 (function autorun() {
   let x = 1;
+
   function log() {
     console.log(x);
   }
+
   function run(fn) {
     lex = 10;
     fn();
@@ -77,6 +80,7 @@ let x0 = 0;
 for (var i = 0; i < 3; i++) {
   console.log(i);
 }
+
 
 for (var i = 0; i < 3; i++) {
   setTimeout(function () {
