@@ -76,12 +76,11 @@ let x0 = 0;
 在 🌟 异步任务例如 timer 定时器，事件处理，Ajax 请求中被作为回调
 被外部函数作为返回结果返回，或者返回结果对象中引用该内部函数 */
 
-// 注意此刻循环里面放了timer定时器，是异步任务。所以会等循环结束后，在执行异步任务
 for (var i = 0; i < 3; i++) {
   console.log(i);
 }
 
-
+// 注意此刻循环里面放了timer定时器，是异步任务。所以会等循环结束后，在执行异步任务
 for (var i = 0; i < 3; i++) {
   setTimeout(function () {
     console.log(i);
@@ -97,3 +96,47 @@ for (var i = 0; i < 3; i++) {
     }, 1000);
   })(i);
 }
+
+/**
+ * 四种表现形式：摘录由神三元
+ *  (1)返回一个函数，最常见
+ *  (2)作为函数参数传递
+ *  (3)在定时器、事件监听、Ajax请求、跨窗口通信、Web Workers或者任何异步中，只要使用了回调函数，实际上就是在使用闭包
+ *  (4)IIFE(立即执行函数表达式)创建闭包, 保存了全局作用域window和当前函数的作用域，因此可以使用全局变量。
+ */
+
+// eg1.
+function f1() {
+  var a = 2;
+  function f2() {
+    console.log(a); //2
+  }
+  return f2;
+}
+var x = f1();
+x(); //另一种调用方式f1()()
+// eg2.
+var a = 1;
+function foo() {
+  var a = 2;
+  function baz() {
+    console.log(a);
+  }
+  bar(baz);
+}
+function bar(fn) {
+  // 这就是闭包
+  fn();
+}
+// 输出2，而不是1
+foo();
+// eg3. 事件监听，定时器见上面
+$("#app").click(function () {
+  console.log("DOM Listener");
+});
+// eg4.
+var a = 2;
+(function IIFE() {
+  // 输出2
+  console.log(a);
+})();
