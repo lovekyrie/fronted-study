@@ -59,3 +59,7 @@ const ids5 = metrics.reduce((newArr, next) => {
   return newArr;
 }, []);
 console.log(ids5);
+
+/**
+ * 通过比较ids3跟ids5的获取值方式比较得出，明显ids5的方法是优于ids3的，因为ids5只执行了一次遍历，而ids3是两次
+ */
