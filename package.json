@@ -1,0 +1,26 @@
+{
+  "name": "fronted-study",
+  "version": "1.0.0",
+  "description": "fronted-develop algorithm design-pattern base-knowledge",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lovekyrie/fronted-study.git"
+  },
+  "keywords": [
+    "study"
+  ],
+  "author": "yupeng.duan <fengdurant@gmail.com> (https://github.com/lovekyrie)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lovekyrie/fronted-study/issues"
+  },
+  "homepage": "https://github.com/lovekyrie/fronted-study#readme",
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  }
+}
