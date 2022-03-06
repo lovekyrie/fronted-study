@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    // "esModuleInterop:true,
+    "incremental":true,
+    "allowJs": true,
+    "lib": [
+      "ES6",
+      "DOM",
+      "ES2017"
+    ],
+    "types": []
+  },
+  "exclude": ["node_modules","./dist/**/*",]
+}

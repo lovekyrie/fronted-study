@@ -8,6 +8,7 @@ export default class LinkedListNode {
     this.value = value;
     this.next = next;
   }
+
   /**
    * 当有回调方法时，直接调用回调方法的取值方式
    * @param {*} callback
