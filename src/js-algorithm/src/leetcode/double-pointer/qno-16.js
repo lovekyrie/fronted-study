@@ -4,6 +4,8 @@
  * 返回这三个数的和。假定每组输入只存在恰好一个解。
  */
 
+const webpackConfig = require("../../../build/webpack.config");
+
 /**
  * @param {number[]} nums
  * @param {number} target
